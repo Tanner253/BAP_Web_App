@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body, #root {
+        @apply bg-brand-purple text-gray-200 font-sans;
+        margin: 0;
+        padding: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-display;
+    }
+}
+
+@keyframes sparkle {
+    0% { transform: scale(0); opacity: 0.5; }
+    50% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0.5; }
+}
+.sparkle {
+    animation: sparkle linear infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(255, 222, 0, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 222, 0, 0.6);
+    }
+}
+
+.hire-me-pulse {
+    animation: pulse-glow 3s infinite ease-in-out;
+    border-radius: 50%;
+} 
